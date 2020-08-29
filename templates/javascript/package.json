@@ -1,0 +1,23 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css" : "node-sass --include-path scss scss/main.scss build/css/style.min.css",
+    "build-js" : "browserify js/app.js>build/js/script.min.js",
+    "build" : "npm run build-css && npm run build-js",
+    "server" : "http-server ./build",
+    "watch" : "nodemon -e js,scss -x \"npm run build && npm run server\" --ignore build/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.5.2",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
