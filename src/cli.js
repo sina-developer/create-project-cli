@@ -7,7 +7,6 @@ let templates = [
     "Webpack" , 
     "React" , 
     "Canvas",
-    "Test",
 ];
 
 function parseArqumentsIntoOptions(rawArgs) {
